@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seminar Presentation Slide</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 16:9 Presentation Slide Container */
+        .slide {
+            width: 100vw;
+            height: 56.25vw; /* Maintain 16:9 aspect ratio */
+            max-width: 1120px;
+            max-height: 630px;
+            background-color: #2b2e2b;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        /* ══════════════ HEADER SECTION ══════════════ */
+        .header {
+            width: 100%;
+            height: 15%;
+            display: flex;
+        }
+
+        .header-left {
+            background-color: #cca329; /* Mustard Yellow Block */
+            flex-grow: 1;
+        }
+
+        .header-right {
+            background-color: #ffffff; /* Logo Block */
+            width: 32%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            border-left: 2px solid #ffffff;
+        }
+
+        /* CSS Logo Replications */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .jgi-circle {
+            background-color: #1d284c;
+            color: white;
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .jgi-circle span {
+            font-size: 10px;
+            font-weight: normal;
+            margin-top: -4px;
+        }
+
+        .university-text {
+            color: #1d284c;
+            line-height: 1.1;
+        }
+
+        .university-text .brand-name {
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: 0.5px;
+        }
+
+        .university-text .brand-name span {
+            color: #b32424;
+        }
+
+        .university-text .location {
+            font-size: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .naac-badge {
+            border-left: 1px solid #ccc;
+            padding-left: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .naac-text {
+            font-size: 9px;
+            font-weight: bold;
+            color: #1d284c;
+            letter-spacing: 0.5px;
+        }
+
+        .grade-a {
+            background-color: #b32424;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 1px 6px;
+            border-radius: 2px;
+            margin-top: 2px;
+        }
+
+        /* ══════════════ MAIN TITLE ══════════════ */
+        .title-container {
+            padding: 30px 40px 15px 40px;
+            text-align: center;
+        }
+
+        .main-title {
+            color: #ffffff;
+            font-size: 1.95vw;
+            font-weight: bold;
+            line-height: 1.4;
+            letter-spacing: 0.8px;
+            border-bottom: 2px solid #3a3f3a;
+            padding-bottom: 20px;
+        }
+
+        @media (min-width: 1120px) {
+            .main-title { font-size: 22px; }
+        }
+
+        /* ══════════════ CONTENT COLUMNS ══════════════ */
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 60px;
+            flex-grow: 1;
+            color: #cecece;
+            font-size: 1.4vw;
+            line-height: 1.5;
+        }
+
+        @media (min-width: 1120px) {
+            .content-container { font-size: 16px; }
+        }
+
+        .column {
+            width: 45%;
+        }
+
+        .column-title {
+            color: #b0b0b0;
+            font-weight: bold;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+        .highlight-text {
+            color: #ffffff;
+            font-weight: bold;
+        }
+
+        /* ══════════════ FOOTER SECTION ══════════════ */
+        .footer {
+            height: 10%;
+            background-color: #7a8a3b; /* Olive/Greenish Bottom Bar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .center-badge {
+            background-color: #527fa1; /* Blue Badge */
+            color: #ffffff;
+            padding: 6px 40px;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .page-number {
+            position: absolute;
+            right: 40px;
+            color: #ffffff;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide">
+        <!-- Top Bar Layer -->
+        <div class="header">
+            <div class="header-left"></div>
+            <div class="header-right">
+                <div class="logo-container">
+                    <div class="jgi-circle">JGI<span>Jharkhand</span></div>
+                    <div class="university-text">
+                        <div class="brand-name">ARKA JAIN<br><span>University</span></div>
+                        <div class="location">Jharkhand</div>
+                    </div>
+                </div>
+                <div class="naac-badge">
+                    <div class="naac-text">NAAC GRADE</div>
+                    <div class="grade-a">A</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Presentation Title -->
+        <div class="title-container">
+            <h1 class="main-title">
+                SEMINAR ON GENERAL INTRODUCTION, COMPOSITION, CHEMISTRY AND CHEMICAL CLASSES, BIOLOGICAL SOURCES, THERAPEUTIC USES AND COMMERCIAL APPLICATIONS OF ALKALOIDAL DRUGS, PHENYL PROPANOIDS AND FLAVONOIDS.
+            </h1>
+        </div>
+
+        <!-- Split Meta Content Information -->
+        <div class="content-container">
+            <!-- Left Metadata Column -->
+            <div class="column">
+                <div class="column-title">UNDER THE GUIDANCE OF :-</div>
+                <div class="highlight-text">Mr. Shubham Ghosh</div>
+                <div>Assistant professor</div>
+                <div>School of Pharmacy</div>
+                <div>Arka Jain University, Jamshedpur</div>
+            </div>
+
+            <!-- Right Metadata Column -->
+            <div class="column">
+                <div class="column-title">SUBMITTED BY :-</div>
+                <div class="highlight-text">YUVRAJ MAHANTA</div>
+                <div>B. Pharmacy III year, V Semester</div>
+                <div>Group :- A</div>
+                <div>Enrollment No. :- AJU/240003</div>
+                <div>School of Pharmacy,</div>
+                <div>Jamshedpur</div>
+            </div>
+        </div>
+
+        <!-- Base Layout Border & Footer Badge -->
+        <div class="footer">
+            <div class="center-badge">School of Pharmacy</div>
+            <div class="page-number">1</div>
+        </div>
+    </div>
+
+</body>
+</html>
